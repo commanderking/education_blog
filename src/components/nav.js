@@ -10,6 +10,10 @@ const navLinks = [
     text: "About",
     url: "/about",
   },
+  {
+    text: "Lesson Prototypes",
+    url: "/prototypes",
+  },
 ];
 
 const Nav = () => {
