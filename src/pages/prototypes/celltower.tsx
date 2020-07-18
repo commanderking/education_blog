@@ -18,12 +18,12 @@ const houseCoordinates = [
 const CellTower = () => {
   return (
     <Layout>
-      <h3>Mission</h3>
+      <h4>Mission Overview</h4>
       <p>
         The new Martian outpost is determining how many cell towers are required
         to cover the needs of all residents. Houses within 4 kilometers of each
-        cell tower can receive cell coverage. How many cell towers are needed so
-        that all residents get coverage?
+        cell tower can receive cell coverage. Where should cell towers be placed
+        so that all residents receive coverage?
       </p>
       <h4>Notes and Requirements</h4>
       <ul>
@@ -34,8 +34,8 @@ const CellTower = () => {
           town
         </li>
         <li>
-          There's only funding for 5 cell towers, but the fewer cell towers we
-          build, the more money we can save for other outpost activities.
+          There's funding for 5 cell towers, but the fewer cell towers we build,
+          the more money we can save for other outpost activities.
         </li>
       </ul>
       <h4>Outpost Map</h4>
