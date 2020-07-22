@@ -61,6 +61,9 @@ const CellTower = () => {
         </a>{" "}
         created by <a href="http://tacib.weebly.com/">TACIB</a>.
       </p>
+      <h4>Explanation of Activity</h4>
+      <div>Inspiration and Context</div>
+      <p></p>
     </Layout>
   );
 };
