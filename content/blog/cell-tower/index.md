@@ -37,7 +37,7 @@ I was concerned, however, that this unit would likely take one to two weeks to t
 
 ### Analysis of Current Digital Lessons on Pythagorean Theorem
 
-With this in mind, I started researching what digital tools currently offered in terms of
+With this in mind, I started researching what digital tools currently offered.
 
 For the most part, digital tools available to students offer opporunities for students to practice their use of the formula, but offer not too much context that would contextualize the concept for learners. In addition, these problems are very straightforward in how learners can solve the problem. Here are a couple examples from IXL and Khan Academy:
 
@@ -49,7 +49,7 @@ For the most part, digital tools available to students offer opporunities for st
 
 ![Khan Academy Example](./khan_academy_pythagorean_theorem.png)
 
-These types of problems are effective for quick checks of understanding from students or for quickly teaching students how to use a formula. The trade off is that they do little to show when the pythagorean will be useful. The IXL example, in particular, feels like a forced example of trying to use a word problem to establish a context.
+These types of problems are effective for quick checks of understanding from students at the end of a class. The trade off is that they do little to excite students about mathematics or provide a real world context where the theorem might be useful. The IXL example, in particular, feels like a forced example of trying to use a word problem to establish a context.
 
 If we were to translate the cell tower problem to fit one of these common digital formats, it'd likely take the form of something like:
 
@@ -57,4 +57,4 @@ If we were to translate the cell tower problem to fit one of these common digita
 
 This problem feels slightly better than the IXL example, but only marginally. While students can better relate to the frustration of not having cell service, they'll still rightly question why a person couldn't just test the cell service when at the new house location. Students really need to forget reality in order to make sense of the problem at hand.
 
-The problem also still funnels the user to take a single approach. It's pretty clearn from the parameters that this is a pythagorean theorem type problem and students may be trained to apply the algorithm to the numbers provided.
+The problem also still funnels the user to take a single approach. Because of the clear parameters and constraints,

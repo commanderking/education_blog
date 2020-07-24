@@ -23,20 +23,18 @@ const CellTower = () => {
       <p>
         The new Martian outpost is determining how many cell towers are required
         to cover the needs of all residents. Houses within 4 kilometers of each
-        cell tower can receive cell coverage. Where should cell towers be placed
-        so that all residents receive coverage?
+        cell tower can receive cell coverage. How many cell towers should we
+        build and where?
       </p>
       <h4>Notes and Requirements</h4>
       <ul>
         <li>Each unit on the map represents 1 km</li>
-        <li>Each house represents a town with a group of residents</li>
         <li>
-          Residents prefer cell towers be built at least 1 km away from their
-          town
+          Each house represents a small neighborhood with a 20-30 households.
         </li>
         <li>
-          There's funding for 5 cell towers, but the fewer cell towers we build,
-          the more money we can save for other outpost activities.
+          Residents have written to the governor that they prefer cell towers be
+          built at least 1 km away from their neighborhood.
         </li>
       </ul>
       <h4>Outpost Map</h4>
