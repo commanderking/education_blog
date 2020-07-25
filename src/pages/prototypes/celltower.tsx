@@ -13,6 +13,7 @@ const houseCoordinates = [
   { x: 5, y: 4 },
   { x: 1, y: 8 },
   { x: -2, y: 7 },
+  { x: 9, y: -9 },
 ];
 
 const CellTower = () => {
