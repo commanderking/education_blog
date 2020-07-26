@@ -3,13 +3,14 @@ title: Cell Tower Prototype (Part 2) - Design and Development
 date: "2020-07-30"
 description: "In part two of the cell tower prototype, I explain how I started designing the actual prototype to meet  "
 keywords: ["Pythagorean Theorem"]
+published: false
 ---
 
 ### Analysis of Current Digital Lessons on Pythagorean Theorem
 
 With this in mind, I started researching what digital tools currently offered.
 
-For the most part, digital tools available to students offer opporunities for students to practice their use of the formula, but offer not too much context that would contextualize the concept for learners. In addition, these problems are very straightforward in how learners can solve the problem. Here are a couple examples from IXL and Khan Academy:
+For the most part, digital tools available to students offer opportunities for students to practice their use of the formula, but offer not too much context that would contextualize the concept for learners. In addition, these problems are very straightforward in how learners can solve the problem. Here are a couple examples from IXL and Khan Academy:
 
 #### IXL - [(More Examples)](https://www.ixl.com/math/grade-7/pythagorean-theorem-find-the-length-of-the-hypotenuse)
 

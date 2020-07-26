@@ -33,7 +33,7 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
-
+  console.log("posts", posts);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Commander King Blog" />
@@ -76,7 +76,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       edges {
         node {
           excerpt
