@@ -1,0 +1,21 @@
+.container {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.title {
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 5px;
+  background-color: lightgreen;
+  font-size: 16px;
+}
+
+.clearMargin {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container ul {
+  margin-left: 25px;
+}
