@@ -6,10 +6,11 @@ import Nav from "./nav";
 
 const Layout = ({ children }) => {
   const header = (
-    <h3
+    <h4
       style={{
         fontFamily: `Montserrat, sans-serif`,
         marginTop: 0,
+        marginBottom: 5,
       }}
     >
       <Link
@@ -21,7 +22,7 @@ const Layout = ({ children }) => {
       >
         Commander King - EdTech Blog
       </Link>
-    </h3>
+    </h4>
   );
 
   return (

@@ -39,8 +39,8 @@ const About = () => {
           .
         </li>
         <li>
-          Started learning to code during while I was teaching to build more
-          engaging activities. Ultimately, leveraged what I learned to build a{" "}
+          Started learning to code while I was teaching to build more engaging
+          activities. Ultimately, leveraged what I learned to build a{" "}
           <a href="https://www.edusaga.com/teacher/public/home/">
             series of lessons
           </a>{" "}

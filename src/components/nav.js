@@ -11,7 +11,7 @@ const navLinks = [
     url: "/about",
   },
   {
-    text: "Lesson Prototypes",
+    text: "Prototypes",
     url: "/prototypes",
   },
 ];
