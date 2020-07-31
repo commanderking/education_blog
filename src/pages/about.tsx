@@ -53,12 +53,12 @@ const About = () => {
       <p>
         This blog serves as a space to share some of my thoughts on educational
         research / pedagogy and how to apply them to create compelling digital
-        learning experiences. I first started learning to program because I
-        wanted to create digital tools that would engage my students in
-        learning. Now as an engineer, I still enjoy designing lessons, but have
-        the ability to actually prototype them to experiment with what works and
-        what doesn't. I'm designing these prototypes with the intention that if
-        I were to ever go back to the classroom, I would actually use them.
+        learning experiences. As a teacher, I first started learning to program
+        because I wanted to create digital tools that would engage my students
+        in learning. Now as an engineer, I have the ability to actually build
+        out some prototype them to experiment with what works and what doesn't.
+        I'm designing these prototypes with the intention that if I were to ever
+        return to the classroom, I would actually use them!
       </p>
 
       <h3>Other About Topics</h3>
