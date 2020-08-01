@@ -1,26 +1,16 @@
 ---
-title: Cell Tower Prototype (Part 1) - Inspiration and Context
-date: "2020-07-25"
-description: "In the Cell Tower prototype, I attempt to show how establishing a real world context for math problems can provide opportunities for students to solve problems in meaningfully different ways and provide a reason for students to collaborate and compare their solutions. This first part highlights the inspiration for creating this prototype and how my research and experiences influenced the final prototype."
-keywords: ["Pythagorean Theorem"]
+title: How I'd Teach the Pythagorean Theorem (Part 1)
+date: "2020-07-31"
+description: "How culturally responsive teaching mathematics inspired me to create a digital prototype for teaching the Pythagorean theorem."
+keywords: ["Pythagorean Theorem, Culturally Responsive Teaching"]
 published: true
 ---
 
-### Summary
-
-In a recently created <a href="/prototypes/celltower" target="_blank">cell tower prototype</a>, a digital problem designed to help students learn the Pythagorean Theorem, I attempt to show how contextualizing a math problem can help students:
-
--- Use multiple ways to solve real world problems, not just the one taught in the current lesson.
-
--- Realize that math can play an important role in making impactful decisions that affect the lives of many people.
-
-Part 1 highlights my own teaching experiences and research on culturally responsive mathematics that inspired me to create this prototype.
-
 ### Culturally Responsive Mathematics
 
-When I taught high school chemistry, I spent a significant amount of my time taking problems from textbooks and figuring out ways to connect them to students' lives or contextualize them so that they could at least see how solving the problem would be important for a professional chemist.
+When I taught high school chemistry, I spent a significant amount of my time transforming basic textbook problems and contextualizing them in a way that would matter to students.
 
-Recently, I became interested to see if there was any research supporting the efficacy of this method and stumbled upon culturally responsive teaching. While cultural responsiveness places a greater emphasis on leveraging students' existing knowledge and sociocultural background to help them solve problems, it similarly wants to contextualize a problem to make it meaningful to a student's life.
+More recently, I became interested to see if there was any research supporting the efficacy of this method and stumbled upon <a href="https://www.understood.org/en/school-learning/for-educators/universal-design-for-learning/what-is-culturally-responsive-teaching">culturally responsive teaching</a>. While cultural responsiveness places a greater emphasis on leveraging students' existing knowledge and sociocultural background to help them solve problems, it similarly wants to contextualize a problem to make it meaningful to a student's life.
 
 In a <a href="https://news.ku.edu/2019/04/19/study-examines-benefits-teaching-math-culturally-responsive-ways" target="_blank">research synthesis</a> that analyzed 35 peer reviewed studies on culturally responsive mathematics, I found a couple of points particularly interesting:
 

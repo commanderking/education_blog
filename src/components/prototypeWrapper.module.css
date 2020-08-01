@@ -6,9 +6,8 @@
 .title {
   border: 1px solid black;
   border-bottom: none;
-  padding: 5px;
+  padding: 10px;
   background-color: lightgreen;
-  font-size: 16px;
 }
 
 .clearMargin {
