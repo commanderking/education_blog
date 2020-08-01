@@ -1,16 +1,19 @@
 ---
 title: How I'd Teach the Pythagorean Theorem (Part 1)
 date: "2020-07-31"
-description: "How culturally responsive teaching mathematics inspired me to create a digital prototype for teaching the Pythagorean theorem."
-keywords: ["Pythagorean Theorem, Culturally Responsive Teaching"]
+description: "How culturally responsive math inspired me to create a digital prototype for teaching the Pythagorean theorem."
+keywords:
+  ["Pythagorean Theorem, Culturally Responsive Teaching", "Context in Math"]
 published: true
 ---
+
+<i>How culturally responsive math inspired me to create a digital prototype for teaching the Pythagorean theorem.</i>
 
 ### Culturally Responsive Mathematics
 
 When I taught high school chemistry, I spent a significant amount of my time transforming basic textbook problems and contextualizing them in a way that would matter to students.
 
-More recently, I became interested to see if there was any research supporting the efficacy of this method and stumbled upon <a href="https://www.understood.org/en/school-learning/for-educators/universal-design-for-learning/what-is-culturally-responsive-teaching">culturally responsive teaching</a>. While cultural responsiveness places a greater emphasis on leveraging students' existing knowledge and sociocultural background to help them solve problems, it similarly wants to contextualize a problem to make it meaningful to a student's life.
+More recently, I became interested to see if there was any research supporting the efficacy of this method and stumbled upon <a href="https://www.understood.org/en/school-learning/for-educators/universal-design-for-learning/what-is-culturally-responsive-teaching" target="_blank">culturally responsive teaching</a>. While cultural responsiveness places a greater emphasis on leveraging students' existing knowledge and sociocultural background to help them solve problems, it similarly seeks to contextualize a problem to make it meaningful to a student's life.
 
 In a <a href="https://news.ku.edu/2019/04/19/study-examines-benefits-teaching-math-culturally-responsive-ways" target="_blank">research synthesis</a> that analyzed 35 peer reviewed studies on culturally responsive mathematics, I found a couple of points particularly interesting:
 
@@ -18,22 +21,22 @@ In a <a href="https://news.ku.edu/2019/04/19/study-examines-benefits-teaching-ma
 
 > Several studies also situated mathematics problem-solving within the context of social justice issues, such as power relations, societal oppression and global poverty.
 
-I consider both the above goals of encouraging multiple solutions and contextualizing lessons in larger social issues worthwhile, but largely aspirational or secondary goals for teachers. I've found that many problems provided in digital lessons or textbooks focus on checking students' understanding for a very specific standard. As a result, the problem is constructed in a way that also leads students to only have that one way of solving a problem. Using the Pythagorean theorem as an example, imagine a problem displaying a triangle with two sides with only one remaining side to be calculated
+I consider both the above goals of encouraging multiple solutions and contextualizing lessons in larger social issues worthwhile, but largely aspirational or secondary goals for teachers. I've found that many problems provided in digital lessons or textbooks focus on checking student understanding for a single standard in isolation. As a result, the problem is described in a way that also nudges students to only have that one way of solving a problem. Using the Pythagorean theorem as an example, imagine a problem displaying a triangle with two sides with only one remaining side to be calculated
 
 ![Khan Academy Example](./khan_academy_pythagorean_theorem.png)
 
 <center><small>Khan Academy Example</small></center>
 <br />
-<p>These problems may be effective in checking mastery of the pythagorean theorem, but it's hard to imagine another way to solve this problem. Sinilarly, because of the narrow scope of the problem, students do not immediately connect how solving a math problem can inform decisions they make in their daily lives, much less larger social issues.
+<p>These problems may be effective in checking mastery of the Pythagorean theorem, but it's hard to imagine any other way to solve this problem besides applying the formula. Similarly, because of the narrow scope of the problem, students have little opportunity to connect how solving this math problem can inform decisions they make in their daily lives or on larger social issues.
 
 Wanting to explore how math lessons could create opportunities for the above goals, I continued reading more literature on culturally responsive mathematics teaching (CRMT), including a <a href="https://www.curriculumassociates.com/-/media/mainsite/files/ready-classroom-mathematics/ready-classroom-mathematics-cultural-responsiveness-whitepaper-2019.pdf" target="_blank">white paper</a> on the topic that highlighted one example of a "lesson focused on identifying possible locations for a new cell phone tower" to teach students the Pythagorean theorem. After reviewing the <a href="https://www.scribd.com/document/366617413/tacib-cell-towers-unit?secret_password=QSO3ygjBeFnOFdO3seZ4#from_embed" target="_blank">teacher resources</a> provided for this lesson, I noted the following:
 
 1. The lesson taught a couple of ways students could determine the best location of a cell tower, which included the Pythagorean theorem, but also included applying translations to circles, another <a href="http://www.corestandards.org/Math/Content/8/G/A/2/" target="_blank"> Common Core state standard</a>.
-1. The ultimate outcome of the unit is students' writing an argumentative essay to explain where cell towers should be built. In order to justify their results, students needed to understand a bit about the science behind waves and their application to information transfer (<a href="https://www.nextgenscience.org/dci-arrangement/ms-ps4-waves-and-their-applications-technologies-information-transfer" target="_blank">a next gen science standard</a>!), read news articles about citizens' concerns with cell towers being built in their neighborhood, and of course, using math to inform the placement of those towers. By providing the context of helping government officials determine where to build towers, the lesson provides an example of how applying math can help people make more informed about decisions that impact many people in the real world.
+1. The ultimate student product of the unit is an argumentative essay explaining where cell towers should be built. In order to justify their results, students needed to understand a bit about the science behind waves and their application to information transfer (<a href="https://www.nextgenscience.org/dci-arrangement/ms-ps4-waves-and-their-applications-technologies-information-transfer" target="_blank">a next gen science standard</a>!), read news articles about citizens' concerns with cell towers being built in their neighborhood, and of course, using math to inform the placement of those towers. By providing the context of helping government officials determine where to build towers, the lesson provides an example of how applying math can help people make more informed decisions about issues that impact many folks in the real world.
 
-Though I appreciated the interdisciplinary nature of the unit, I was concerned about the length of the unit, which would likely take at least a week to complete. The reality for many teachers is they're pressured by the state assessment to cut pieces that might not be essential to mastering the core standard. I can imagine teachers wishing there were a more bite-sized version of this lesson that would still capture the essence of culturally responsive mathematics, but in a more compact format.
+Though I appreciated the interdisciplinary nature of the unit, I was concerned about the length of the unit, which would likely take at least a week to complete. The reality for many teachers is they feel pressured by state assessments and cut any pieces that are not core to mastering the standard itself. I can imagine teachers wishing there were a more bite-sized version of this lesson that would still capture the essence of culturally responsive mathematics.
 
-In part 2, I'll explain the process of designing this lesson and developing it digitally.
+In part 2, I'll explain the process of designing this lesson and developing this version digitally.
 
 #### Links and Additional Resources
 

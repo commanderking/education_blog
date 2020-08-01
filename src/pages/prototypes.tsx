@@ -8,8 +8,11 @@ const Prototypes = () => {
       <Layout>
         <h3>Prototypes</h3>
         <div>
-          <Link to="/prototypes/celltower">Cell Tower Problem </Link>
-          <p>Adding meaningful context to pythagorean theorem problems</p>
+          <Link to="/prototypes/celltower">Pythagorean Theorem</Link>
+          <p>
+            Applying Pythagorean theorem to determine the optimal locations of
+            cell towers in a Martian outpost{" "}
+          </p>
         </div>
       </Layout>
     </div>
