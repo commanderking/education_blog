@@ -5,7 +5,7 @@ const PrototypeWrapper = ({ title, children }) => {
   return (
     <div>
       <div className={styles.title}>
-        <h3 className={styles.clearMargin}>{title}</h3>
+        <h4 className={styles.clearMargin}>{title}</h4>
       </div>
       <div className={styles.container}>{children}</div>
     </div>

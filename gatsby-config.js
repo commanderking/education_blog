@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Education Blog`,
+    title: `Commander King`,
     author: {
       name: `Jeff King`,
       summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `An education blog that focuses on designing and prototyping lessons for K-12 students`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `commander_king`,

@@ -36,7 +36,8 @@ const CellTower = () => {
   `);
   return (
     <Layout>
-      <PrototypeWrapper title={"Building Cell Towers"}>
+      <h3>Pythagorean Theorem Prototype</h3>
+      <PrototypeWrapper title={"Building Cell Towers in Martian Outpost"}>
         <h4>Mission Overview</h4>
         <Image
           fluid={data.marsOutpostImage.childImageSharp.fluid}
