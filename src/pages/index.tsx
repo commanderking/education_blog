@@ -33,7 +33,6 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
-  console.log("posts", posts);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Commander King Blog" />
@@ -63,6 +62,22 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           </article>
         );
       })}
+      <hr />
+      <form
+        action="https://tinyletter.com/commanderking"
+        method="post"
+        target="popupwindow"
+      >
+        <div style={{ paddingBottom: "5px" }}>To stay updated:</div>
+        <input
+          placeholder="youremail@email.com"
+          type="text"
+          name="email"
+          id="tlemail"
+        />
+        <input type="hidden" value="1" name="embed" />
+        <input type="submit" value="Subscribe" />
+      </form>
     </Layout>
   );
 };

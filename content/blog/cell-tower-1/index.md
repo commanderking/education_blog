@@ -21,7 +21,7 @@ In a <a href="https://news.ku.edu/2019/04/19/study-examines-benefits-teaching-ma
 
 > Several studies also situated mathematics problem-solving within the context of social justice issues, such as power relations, societal oppression and global poverty.
 
-I consider both the above goals of encouraging multiple solutions and contextualizing lessons in larger social issues worthwhile, but largely aspirational or secondary goals for teachers. I've found that many problems provided in digital lessons or textbooks focus on checking student understanding for a single standard in isolation. As a result, the problem is described in a way that also nudges students to only have that one way of solving a problem. Using the Pythagorean theorem as an example, imagine a problem displaying a triangle with two sides with only one remaining side to be calculated
+I consider both the above goals of encouraging multiple solutions and contextualizing lessons in larger social issues worthwhile, but largely aspirational or secondary goals for teachers. I've found that many problems provided in digital lessons or textbooks focus on checking student understanding for a single standard in isolation. As a result, the problem is described in a way that also nudges students to only have that one way of solving a problem. Using the Pythagorean theorem as an example, imagine a problem displaying a triangle with two sides with only one remaining side to be calculated.
 
 ![Khan Academy Example](./khan_academy_pythagorean_theorem.png)
 
