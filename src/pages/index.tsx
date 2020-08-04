@@ -1,12 +1,10 @@
-// Gatsby supports TypeScript natively!
 import React from "react";
 import { PageProps, Link, graphql } from "gatsby";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
-
+import SubscribeForm from "../components/subscribeForm";
 type Data = {
   site: {
     siteMetadata: {
@@ -63,21 +61,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         );
       })}
       <hr />
-      <form
-        action="https://tinyletter.com/commanderking"
-        method="post"
-        target="popupwindow"
-      >
-        <div style={{ paddingBottom: "5px" }}>To stay updated:</div>
-        <input
-          placeholder="youremail@email.com"
-          type="text"
-          name="email"
-          id="tlemail"
-        />
-        <input type="hidden" value="1" name="embed" />
-        <input type="submit" value="Subscribe" />
-      </form>
+      <SubscribeForm />
     </Layout>
   );
 };
