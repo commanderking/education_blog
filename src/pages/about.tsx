@@ -81,7 +81,6 @@ const About = () => {
         </li>
       </ul>
       <h3 id="ed-tech-background">Relevant Education and Tech Background</h3>
-      <p>Here are few experiences that contribute to how I think:</p>
       <ul>
         <li>
           Taught high school chemistry and Chinese at Camden County Technical
