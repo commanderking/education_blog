@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Commander King`,
+    title: `EdTech Blog - Commander King`,
     author: {
       name: `Jeff King`,
       summary: ``,
     },
-    description: `An education blog that focuses on designing and prototyping lessons for K-12 students`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `An education technology blog that focuses on designing and prototyping lessons for K-12 students`,
+    siteUrl: `https:www.commanderking.com/`,
     social: {
       twitter: `commander_king`,
     },
@@ -66,7 +66,6 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

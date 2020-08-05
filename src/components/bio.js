@@ -8,6 +8,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import { rhythm } from "../utils/typography";
 
@@ -54,9 +55,16 @@ const Bio = () => {
         }}
       />
 
-      <p style={{ fontSize: "14px" }}>
-        Written by <strong>{author.name}</strong> {author.summary}, who enjoys
-        designing and building digital learning experiences.
+      <p style={{ fontSize: "16px" }}>
+        Written by <strong>{author.name}</strong>
+        {author.summary}. To stay updated on new blog posts,{" "}
+        <OutboundLink
+          href="https://tinyletter.com/commanderking"
+          target="_blank"
+        >
+          subscribe
+        </OutboundLink>
+        .{" "}
       </p>
     </div>
   );

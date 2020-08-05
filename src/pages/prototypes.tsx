@@ -10,8 +10,8 @@ const Prototypes = () => {
         <div>
           <Link to="/prototypes/celltower">Pythagorean Theorem</Link>
           <p>
-            Applying Pythagorean theorem to determine the optimal locations of
-            cell towers in a Martian outpost{" "}
+            Applying the Pythagorean theorem to determine the optimal locations
+            of cell towers in a Martian outpost{" "}
           </p>
         </div>
       </Layout>

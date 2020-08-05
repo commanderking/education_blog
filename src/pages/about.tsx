@@ -6,7 +6,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 const About = () => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
-      avatar: file(absolutePath: { regex: "/about-photo.jpg/" }) {
+      profile: file(absolutePath: { regex: "/about-photo.jpg/" }) {
         childImageSharp {
           fixed {
             ...GatsbyImageSharpFixed
@@ -31,7 +31,7 @@ const About = () => {
       <h3>About Me</h3>
       <div style={{ display: "block", margin: "auto" }}>
         <Image
-          fixed={data.avatar.childImageSharp.fixed}
+          fixed={data.profile.childImageSharp.fixed}
           alt={author.name}
           style={{
             margin: "auto",
@@ -41,26 +41,34 @@ const About = () => {
           }}
         />
       </div>
-
       <p>
         I'm Jeff! I'm grateful for the many educational opportunities I've been
         given and wish all students could have equitable access to a quality
         education. I'm on a journey to figure out ways, both small and large, in
         which I can make that happen.
       </p>
-
-      <h3> About This Blog</h3>
+      <p>
+        Feel free to connect on{" "}
+        <OutboundLink
+          target="_blank"
+          href="https://www.linkedin.com/in/jeffrey-king-5377a7b4/"
+        >
+          linkedin
+        </OutboundLink>{" "}
+        or email me at:{" "}
+        <a href="jeff@commanderking.com">jeff@commanderking.com</a>.
+      </p>
+      <h3>About This Blog</h3>
       <p>
         This blog serves as a space to share some of my thoughts on educational
         research / pedagogy and how to apply them to create compelling digital
         learning experiences. As a teacher, I first started learning to program
         because I wanted to create digital tools that would engage my students
-        in learning. Now as an engineer, I have the ability to actually build
-        out some prototype them to experiment with what works and what doesn't.
-        I'm designing these prototypes with the intention that if I were to ever
-        return to the classroom, I would actually use them!
+        in learning. Now as an engineer, I have the ability to actually
+        prototype them and experiment with what might work. I'm designing these
+        prototypes with the intention that if I were to ever return to the
+        classroom, I would actually use them!
       </p>
-
       <h3>Other About Topics</h3>
       <ul>
         <li>
@@ -72,9 +80,7 @@ const About = () => {
           <a href="#commander-king">Who's Commander King?</a>
         </li>
       </ul>
-
       <h3 id="ed-tech-background">Relevant Education and Tech Background</h3>
-      <p>Here are few experiences that contribute to how I think:</p>
       <ul>
         <li>
           Taught high school chemistry and Chinese at Camden County Technical
@@ -121,7 +127,10 @@ const About = () => {
       <h3 id="commander-king">Who's Commander King? </h3>
       <p>
         Commander King was the{" "}
-        <OutboundLink href="https://www.youtube.com/watch?v=bJnls3P7Qe4">
+        <OutboundLink
+          href="https://www.youtube.com/watch?v=bJnls3P7Qe4"
+          target="_blank"
+        >
           persona
         </OutboundLink>{" "}
         I played in my chemistry classes. During my time teaching, I worked to
@@ -129,14 +138,17 @@ const About = () => {
         role of scientists who mastered chemical principles to solve important
         missions and save humanity from the galaxy’s many dangers. I was heavily
         influenced by Mass Effect, a videogame I was playing at the time that
-        pushed me to create a learning experience that immersed my students in
-        learning just like how Mass Effect immersed me in its storytelling.
+        immersed me so heavily in the story and world it built that I was
+        inspired to try to create an experience just as immersive for my
+        students.
       </p>
       <p>
-        Despite the outlandish approach, I believe it played a non-trivial role
-        in engaging students in chemistry, though it may not have been the most
-        efficient way to engage students considering how much effort I put into
-        it. This will likely be the topic of a future blog post.
+        I can't say I was completely successful, but I do believe that my
+        students appreciated my efforts and that it played a non-trivial role in
+        engaging students in chemistry. I'll be the first to acknowledge,
+        however, that it may not have been the most efficient way to engage
+        students considering how much effort I put into it. This will likely be
+        the topic of a future blog post.
       </p>
     </Layout>
   );

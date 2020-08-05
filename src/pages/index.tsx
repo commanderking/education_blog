@@ -1,12 +1,10 @@
-// Gatsby supports TypeScript natively!
 import React from "react";
 import { PageProps, Link, graphql } from "gatsby";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
-
+import SubscribeForm from "../components/subscribeForm";
 type Data = {
   site: {
     siteMetadata: {
@@ -33,7 +31,6 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
-  console.log("posts", posts);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Commander King Blog" />
@@ -63,6 +60,8 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           </article>
         );
       })}
+      <hr />
+      <SubscribeForm />
     </Layout>
   );
 };
