@@ -22,6 +22,7 @@ const Nav = () => {
       {navLinks.map(link => {
         return (
           <li
+            key={link.url}
             style={{
               display: "inline-block",
               listStyle: "none",
