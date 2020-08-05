@@ -29,7 +29,9 @@ const About = () => {
   return (
     <Layout>
       <h3>About Me</h3>
-      <div style={{ display: "block", margin: "auto" }}>
+      <div
+        style={{ display: "block", maxWidth: "428px", paddingBottom: "10px" }}
+      >
         <Image
           fluid={data.profile.childImageSharp.fluid}
           alt={author.name}

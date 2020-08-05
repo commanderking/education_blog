@@ -17,7 +17,10 @@ const SubscribeForm = () => {
       <input
         type="submit"
         value="Subscribe"
-        style={{ padding: "8px 12px 8px 12px" }}
+        style={{
+          marginLeft: "2px",
+          padding: "8px 12px 8px 12px",
+        }}
       />
     </form>
   );
