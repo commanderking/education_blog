@@ -5,6 +5,18 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
 import SubscribeForm from "../components/subscribeForm";
+
+const byPublished = ({ node }) => {
+  const isDevelopment = process.env.NODE_ENV === "development";
+
+  // If in development mode, return all posts regardless of whether they're filtered or not
+  if (isDevelopment) {
+    return true;
+  }
+
+  return node.frontmatter.published;
+};
+
 type Data = {
   site: {
     siteMetadata: {
@@ -19,6 +31,7 @@ type Data = {
           title: string;
           date: string;
           description: string;
+          published: string;
         };
         fields: {
           slug: string;
@@ -31,10 +44,13 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
+
+  // const byPublishedPosts = process.env.NODE_ENV === 'development' ? false : true
+  console.log("posts", posts);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Commander King Blog" />
-      {posts.map(({ node }) => {
+      {posts.filter(byPublished).map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug}>
@@ -86,6 +102,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            published
           }
         }
       }
