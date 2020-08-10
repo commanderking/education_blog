@@ -1,6 +1,6 @@
 ---
-title: Cell Tower Prototype (Part 2) - Design and Development
-date: "2020-07-30"
+title: How I'd Teach the Pythagorean Theorem (Part 2)
+date: "2020-08-09"
 description: "In part two of the cell tower prototype, I explain how I started designing the actual prototype to meet  "
 keywords: ["Pythagorean Theorem"]
 published: false

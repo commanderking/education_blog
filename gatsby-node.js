@@ -3,14 +3,19 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
+
+  const filterOnPublish =
+    process.env.NODE_ENV === "development"
+      ? ""
+      : "filter: { frontmatter: { published: { eq: true } } }";
+
   const result = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { published: { eq: true } } }
+          ${filterOnPublish}
           limit: 1000
         ) {
           edges {
