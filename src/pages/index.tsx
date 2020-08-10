@@ -45,13 +45,14 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
-  // const byPublishedPosts = process.env.NODE_ENV === 'development' ? false : true
-  console.log("posts", posts);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Commander King Blog" />
       {posts.filter(byPublished).map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
+
+        const isPublishedDevModeOnly =
+          process.env.NODE_ENV === "development" && !node.frontmatter.published;
         return (
           <article key={node.fields.slug}>
             <header>
@@ -61,9 +62,10 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                  {isPublishedDevModeOnly && "DEV ONLY - "} {title}
                 </Link>
               </h3>
+
               <small>{node.frontmatter.date}</small>
             </header>
             <section>

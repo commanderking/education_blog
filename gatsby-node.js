@@ -1,8 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-console.log(process.env.NODE_ENV);
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
@@ -12,7 +10,6 @@ exports.createPages = async ({ graphql, actions }) => {
       ? ""
       : "filter: { frontmatter: { published: { eq: true } } }";
 
-  console.log("filterOnPublish", filterOnPublish);
   const result = await graphql(
     `
       {
