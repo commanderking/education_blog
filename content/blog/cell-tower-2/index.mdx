@@ -1,0 +1,65 @@
+---
+title: How I'd Teach the Pythagorean Theorem (Part 2)
+date: "2020-08-09"
+description: "Analyzing current digital pythagorean theorem problems and designing a different approach."
+keywords: ["Pythagorean Theorem"]
+published: false
+---
+
+import PrototypeOne from "./prototype1.tsx";
+
+<i>
+  Analyzing current digital pythagorean theorem problems and designing a
+  different approach.
+</i>
+;
+
+In <a href="./cell-tower-1" target="_blank">Part 1</a>, I was inspired by culturally responsive teaching to create a lesson around the Pythagorean theorem that would:
+
+1. Encourage students to find different valid solutions to a realistic problem.
+1. Help students see that applying math can help people make better decisions that have an impact on many people.
+
+### Current Digital Pythagorean Theorem Problems
+
+Before designing this lesson, I analyzed how a few commonly used digital tools approached this problem. Here are a couple examples from IXL and Khan Academy:
+
+#### IXL - [(More Examples)](https://www.ixl.com/math/grade-7/pythagorean-theorem-find-the-length-of-the-hypotenuse)
+
+![IXL Example](./ixl_pythagorean_theorem.png)
+
+#### Khan Academy - [(More Examples)](https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/e/pythagorean_theorem_1)
+
+![Khan Academy Example](./khan_academy_pythagorean_theorem.png)
+
+I can see the above questions being effective for a quick check of student understanding at the end of a class to see whether students have understood how to apply the formula. How quickly these problems can be solved and assessed is likely why they're valuable, but if a teacher were to only provide students with questions like these throughout the year, it's fairly easy to see why the majority of students would not want to pursue math or understand how learning math could be fun or meaningful.
+
+If we were to translate the cell tower lesson described in <a href="./cell-tower-1" target="_blank">part 1</a>, to fit one of these common digital formats, it'd likely take the form of something like:
+
+> A cell tower has a range of 4 km. Commander King is considering buying a new house. To get to the new house from the cell tower, he would need to walk 2 km east and then 3 km south. Will his new house get cell service?
+
+This problem feels slightly better than the IXL word example, but only marginally. While students can better relate to the frustration of not having cell service, they'll still rightly question why a person couldn't just test the cell service when at the new house location. Students really need to forget reality in order to make sense of the problem at hand.
+
+When I would design my own lessons, I often fell into the trap of creating word problems like the one above. I thought if I could add some text that might connect it to a student interest, they might be more interested in learning. For example, if a student liked baseball, maybe we'd calculate the distance from first base to third base. But in reality, I found that the more a student knew about a topic, the more the context of the problem would actually make less sense. In the baseball example, no one actually runs from first to third base. And if we could measure the distance between the other bases, why couldn't we just measure across there?
+
+Instead of this forced connection, what I found more effective was showing how solving a problem could help people either make better sense of the world around them or make better decisions that impact their own life or the lives of others. It didn't have to directly connect to their life. Students just needed to see how at least one person in society might benefit from that knowledge.
+
+In this case, the cell tower problem produced by TACIB gave me a really solid context. Deciding where to build a cell phone tower has a significant impact on people who live near the tower as they'll have access to better cell service. It can also start digging into deeper questions about whether everyone, even those who may live in less densely populated areas should have cell service and if so, what are the costs? Are there other concerns for residents who need to live closely to a cell tower?
+
+Had such a context not been provided, I would really need to first spend time thinking about a real problem that the Pythagorean theorem could help solve and by solving that problem, what new insights do we gain?
+
+### First Attempt
+
+The key question in the TACIB cell tower problem is should a tower be built at a given location? In one of the lessons, students are provided a map of Anaheim and asked to calculate the distance between cell towers and certain locations to help students see whether certain areas are covered by the tower. I appreciate how this question can help students immediately see that the result of solving these problems is that they can have a more informed decision about whether certain areas get cell service coverage or not.
+
+So I started with a prototype that was something like the following:
+
+One of the easiest ways I found to create interesting problems was to figure out if I could turn it into a question about optimizing or maximizing some result. This so often works because when we make decisions, many people try to optimize for the best outcomes and as a result, the concept of optimizing is realistic and makes sense to students.
+
+<PrototypeOne />
+
+### Design Constraints
+
+- Meets two Common Core Standards on Pythagorean Theorem
+  1. CCSS.Math.Content.8.G.B.7 - Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions.
+  1. CCSS.Math.Content.8.G.B.8 - Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.
+- Provides opportunities for students to take a different approach to solve the problem

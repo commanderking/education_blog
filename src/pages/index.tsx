@@ -23,7 +23,7 @@ type Data = {
       title: string;
     };
   };
-  allMarkdownRemark: {
+  allMdx: {
     edges: {
       node: {
         excerpt: string;
@@ -43,7 +43,7 @@ type Data = {
 
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMdx.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
