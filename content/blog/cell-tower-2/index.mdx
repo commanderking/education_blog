@@ -7,6 +7,7 @@ published: false
 ---
 
 import PrototypeOne from "./prototype1.tsx";
+import PrototypeTwo from "./prototype2.tsx";
 
 <i>
   How culturally responsive math inspired me to create a digital prototype for
@@ -46,7 +47,7 @@ Had such a context not been provided, I would really need to first spend time th
 
 The key question in the TACIB cell tower problem is should a tower be built at a given location? In one of the lessons, students are provided a map of Anaheim and asked to calculate the distance between cell towers and certain locations to help students see whether certain areas are covered by the tower. I appreciate how this question can help students immediately see that the result of solving these problems is that they can have a more informed decision about whether certain areas get cell service coverage or not.
 
-So I started with a prototype that was something like the following:
+I started with the following prototype.
 
 <PrototypeOne />
 
@@ -58,13 +59,21 @@ Not too bad. There are a few things I liked about this problem.
 
 3. Another approach could be to ask a group of students to split up the households so that they could each calculate the distance of one household, compare and contrast their work, and as a group make a team decision about whether all households would receive cell phone coverage.
 
-4. There is some room for students to approach this problem differently in meaningful ways. For example, the blind approach to this problem would be for a student to calculate the distance between every household and the cell tower. But some students might first estimate the distance of each household to the cell tower. That might help them determine certain households are already out of range and do not need a calclulation.
+4. There is some room for students to approach this problem differently in meaningful ways. For example, the blind approach to this problem would be for a student to calculate the distance between every household and the cell tower. But some students might first estimate the distance of each household to the cell tower. That might help them determine certain households that are well within range and do not need a calclulation.
 
 Here's what I still wanted to improve:
 
-1. Ultimately, the primary work is still performing a calculation and at most reaches the "analyze" level of Bloom's taxonomy. There's some critical thinking for students who take a creative approach. While not every lesson or problem can invoke the highest tiers of Bloom's taxonomy or require high levels of critical thinking, I wanted to see if we could make some small adjustments that could help it require students to evaluate or create.
+1. Ultimately, the primary work is still performing a calculation and at most reaches the "apply" level of <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/" target="_blank">Bloom's taxonomy</a>. While it's important teachers offer problems that do assess these lower levels of remembering, understanding, and applying, I believe that with some adjustments this problem could also offer opoprtunities for students to evaluate and analyze.
+
+2. There is still only one right answer to the question. Again, there's nothing exactly wrong with this, but I think there's real value to showing students that there can be multiple reasonable answers to a problem. This naturally unlocks opportunities to compare and contrast answers, communicate tradeoffs, and attempt to justify the better approach for a specific context.
 
 ### Second Attempt
+
+<PrototypeTwo />
+
+One of the most common ways I moved to the higher tiers of Bloom's taxonomy during my time teaching was to take a problem that asked for a single answer and turned it into a question about optimizing the answer. In the example above, I ask students to optimize for the minimum number of cell towers that can be placed. This now requires students to reach for the higher tiers of analysis and evaluation. They can place the cell towers in many different locations and need to compare and contrast whether that placement is better than a different placement.
+
+In addition, there can now actually be different answers that all meet the requirement. As a teacher, what excites me most is the opportunities this provides students when they compare and constrast answers. Normally, in a simple problem like the ones shared at the beginning of this post, students will compare answers and it's just a literal check to see if their answers match. Now, however, students can both be right and still get value out of comparing their answers. It requires them to talk through the differences in their approach and justify whether one answer might be better than the other.
 
 ### Design Constraints
 
