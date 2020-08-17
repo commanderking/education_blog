@@ -8,6 +8,7 @@ published: false
 
 import PrototypeOne from "./prototype1.tsx";
 import PrototypeTwo from "./prototype2.tsx";
+import PrototypeThree from "./prototype3.tsx";
 
 <i>
   How culturally responsive math inspired me to create a digital prototype for
@@ -37,23 +38,19 @@ This problem feels slightly better than the IXL word example, but only marginall
 
 When I first started designing my own lessons, I often fell into the trap of creating word problems like the one above. I assumed by matching a problem to a student's interest, they'd be more engaged. For example, if a student liked baseball, I might try asking students to calculate the distance from first base to third base. But in reality, I found that the more a student knew about a topic, the more the context of the problem would actually make less sense. In the baseball example, no one actually runs from first to third base, so why would this calculation be useful?
 
-Instead of this forced connection, what I found more effective was showing how solving a problem could help people either make better sense of the world around them or make better decisions that impact their own life or the lives of others. It didn't have to directly connect to their life. Students just needed to see how at least one person in society might benefit from that knowledge and that's what made it interesting.
-
-In this case, the cell tower problem produced by TACIB gave me a really solid context. Deciding where to build a cell phone tower has a significant impact on people who live near the tower as they'll have access to better cell service. It can also start digging into deeper questions about whether everyone, even those who may live in less densely populated areas should have cell service and if so, what are the costs? Are there other concerns for residents who need to live closely to a cell tower?
-
-Had such a context not been provided, I would really need to first spend time thinking about a real problem that the Pythagorean theorem could help solve and by solving that problem, what new insights do we gain?
+Instead of this forced connection, what I found more effective was showing how solving a problem could help people either make better sense of the world around them or make better decisions that impact the lives of others. It didn't have to directly connect to their life. Students just needed to see how at least one person in society might benefit from that knowledge.
 
 ### First Attempt
 
-The key question in the TACIB cell tower problem is should a tower be built at a given location? In one of the lessons, students are provided a map of Anaheim and asked to calculate the distance between cell towers and certain locations to help students see whether certain areas are covered by the tower. I appreciate how this question can help students immediately see that the result of solving these problems is that they can have a more informed decision about whether certain areas get cell service coverage or not.
+In this case, the cell tower problem produced by TACIB already provided a meaningful context. The key question in the TACIB cell tower problem is should a tower be built at a given location? In one of the lessons, students are provided a map of Anaheim and asked to <a href="http://tacib.weebly.com/uploads/1/3/9/1/13912599/student_work_sample_grade_8_-_persuasive_pitch_for_building_cell_towers_near_schools.pdf" target="_blank"> calculate the distance between cell towers and specified locations</a> and determine whether certain areas are within the service range. With this context, students can easily connect that solving a math problem can lead to more informed decisions about where to build cell towers.
 
-I started with the following prototype.
+With that reference, I started with the following prototype.
 
 <PrototypeOne />
 
-Not too bad. There are a few things I liked about this problem.
+There are a few things I liked about this prototype.
 
-1. It makes a strong connection between solving a problem and gaining a piece of useful information. By applying the Pythagorean theorem, one can determine whether a household could receive cellular service. The wording of the question here is critical. Rather than asking students to calculate the distance between the cellular tower and each of the three households, I explicitly choose to ask about whether they receive cell coverage. This puts the emphasis on the impact of solving the problem. What matters here isn't the distance, but whether people can actually get coverage.
+1. It makes a clear connection between solving a problem and gaining a piece of useful information. By applying the Pythagorean theorem, one can determine whether a household could receive cellular service. The wording of the question here is critical. Rather than asking students to calculate the distance between the cellular tower and each of the three households, I explicitly choose to ask about whether they receive cell coverage. This puts the emphasis on the impact of solving the problem. What matters here isn't the distance, but whether people can actually get coverage.
 
 2. In one problem, we offer three opportunities for students to apply the Pythagorean theorem. This gives us some flexibility in how we use this problem. A teacher could for example, follow an "I do, we do, you do" approach in which they model with one household, get student volunteers to work together on computing another problem, and ask students to determine the last problem.
 
@@ -65,15 +62,43 @@ Here's what I still wanted to improve:
 
 1. Ultimately, the primary work is still performing a calculation and at most reaches the "apply" level of <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/" target="_blank">Bloom's taxonomy</a>. While it's important teachers offer problems that do assess these lower levels of remembering, understanding, and applying, I believe that with some adjustments this problem could also offer opoprtunities for students to evaluate and analyze.
 
-2. There is still only one right answer to the question. Again, there's nothing exactly wrong with this, but I think there's real value to showing students that there can be multiple reasonable answers to a problem. This naturally unlocks opportunities to compare and contrast answers, communicate tradeoffs, and attempt to justify the better approach for a specific context.
+2. There is still only one right answer to the question. Again, there's nothing exactly wrong with this, but I also think there's real value to showing students that there can be multiple reasonable answers to a problem. This naturally unlocks opportunities to compare and contrast answers, communicate tradeoffs, and attempt to justify the better approach for a specific context. These are all objectives that require students to reach for higher levels of critical thining.
 
 ### Second Attempt
 
 <PrototypeTwo />
 
-One of the most common ways I moved to the higher tiers of Bloom's taxonomy during my time teaching was to take a problem that asked for a single answer and turned it into a question about optimizing the answer. In the example above, I ask students to optimize for the minimum number of cell towers that can be placed. This now requires students to reach for the higher tiers of analysis and evaluation. They can place the cell towers in many different locations and need to compare and contrast whether that placement is better than a different placement.
+One of the most common ways I moved to the higher tiers of Bloom's taxonomy during my teaching career was to ask students to optimize for the minimum or maximum quantity required. In the example above, I ask students to optimize for the minimum number of cell towers that can be placed. Students now need to actually design and lay out where the cell towers should be placed. This require them to iterate over a few options, compare and contrast these options, and ultimately justify which option makes the most sense.
 
-In addition, there can now actually be different answers that all meet the requirement. As a teacher, what excites me most is the opportunities this provides students when they compare and constrast answers. Normally, in a simple problem like the ones shared at the beginning of this post, students will compare answers and it's just a literal check to see if their answers match. Now, however, students can both be right and still get value out of comparing their answers. It requires them to talk through the differences in their approach and justify whether one answer might be better than the other.
+In addition, there can now actually be different answers that all meet the requirement. As a teacher, what excites me most is the opportunities this provides students when they compare and constrast answers with each other. Normally, in more straightforward problems, when asked to check their answers with each other, they see if their answers match. If so, there's no further discussion. In a problem like this, however, even if both students agree wthe minimum number of cell towers is two, they can still have different results. This might lead to students taking a more critical look at each other's work to make sure that all households are indeed within cell tower range.
+
+### Final Touch up
+
+<PrototypeThree />
+
+There are two small updates here.
+
+1. The question has been changed from "What is the minimum number of cell towers that need to be built so that all households get cell coverage?" to "How many cell towers should be built and where?""
+
+2. I added one house at coordinates (13, 14).
+
+The more open ended problem allows students to justify a greater variety of answers. While I imagine most students will still attempt to minimize the number of cell towers that covers all households, by making one house an outlier, a couple students might question whether it's optimal to cover all households or just the majority of households.
+
+When such questions are asked, we can begin exploring real issues in our society. For example, is it ok to leave certain households outside of cell service range? In the real world, there are consequences to decisions organizations make and rarely does a decision benefit everyone. Decision makers need to weigh the tradeoffs of each approach and providing problems that provide students the space to start debating some of those tradeoffs is a big win in my book.
+
+I hope this problem also communicates that even if we correctly "solve the math problem", that in itself does not provide the answer. Instead, solving the math problem allows us to make a more informed decision. Depending on the constraints we put on ourselves (i.e. whether we need to provide access to all households), we can come up with many viable answers that each priortize different goals (i.e. minimizing costs or ensuring equity).
+
+### Trade Offs
+
+As problems become more open ended, it becomes harder to guarantee that students will solve the problem using one exact method. This makes it difficult to assess whether students have actually mastered the Pythagorean theorem since this particular problem can also be solved with estimation or drawing circles.
+
+Students also need to spend more time on other aspects of the problem that are unrelated to applying the Pythagorean theorem. For example, in the final iteration of the prototype, they need to analyze a few places where the tower can be placed before they can even do any calcluations.
+
+Finally, despite not taking the full one or two weeks the original TACIB problem would have taken, this problem will still require more class time to solve. In the time it takes to solve this one problem, students likely could have practiced three or four sets of traditional Pythagorean problems.
+
+These are all valid concerns. I acknowledge that every problem in the curriculum likely can't be this open ended given our emphasis on state testing and standards coverage. I do think, however, there's significant value in having at least one problem like this every couple weeks, which really pushes students to solve meaningful and open ended problems.
+
+In part three, I'll try to justify that these tradeoffs are worth it incorporating this problem into a lesson plan.
 
 ### Design Constraints
 
