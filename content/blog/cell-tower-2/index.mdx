@@ -17,7 +17,7 @@ import PrototypeThree from "./prototype3.tsx";
 
 ### Current Digital Pythagorean Theorem Problems
 
-I first analyzed how a few commonly used digital tools approached this problem to have a point of comparison. Here are a couple examples from IXL and Khan Academy:
+I first looked at a few commonly used pythagorean problems to have a point of comparison. Here are a couple examples from IXL and Khan Academy:
 
 #### IXL - [(More Examples)](https://www.ixl.com/math/grade-7/pythagorean-theorem-find-the-length-of-the-hypotenuse)
 
@@ -27,21 +27,21 @@ I first analyzed how a few commonly used digital tools approached this problem t
 
 ![Khan Academy Example](./khan_academy_pythagorean_theorem.png)
 
-These questions can be effective for a quick check of student understanding, but do not provide much meaningful context or opportunities for multiple ways to solve the problem, which were our goals established in <a href="">part 1</a>. If we were to translate the cell tower lesson described in <a href="/cell-tower-1" target="_blank">part 1</a> to fit one of these common digital formats, it'd likely take the form of something like:
+These questions can be effective for a quick check of student understanding, but do little to meet the objectives we established in <a href="">part 1</a>:
 
-> A cell tower has a range of 4 km. Commander King is considering buying a new house. To get to the new house from the cell tower, he would need to walk 2 km east and then 3 km south. Will his new house get cell service?
+1. Prepare students to use multiple strategies to solve problems and justify their solutions.
 
-This problem feels slightly better than the IXL word example, but only marginally. While students may better relate to the frustration of not having cell service, they'll likely still question why a person couldn't just test the cell service when at the new house location.
+2. Situate mathematics problem-solving within a real world context so students can connect how applying math can help solve real problems and make more informed decisions in their lives.
 
 ### First Attempt
 
-Luckily, the cell tower unit presented by TACIB already established a strong context by asking students to determine whether cell towers should be built near schools. Because the calculations in the unit are done to inform this decision, students can more easily connect that solving a math problem can lead to more informed decisions.
+The <a href="https://www.scribd.com/document/366617413/tacib-cell-towers-unit?secret_password=QSO3ygjBeFnOFdO3seZ4#from_embed" target="_blank">cell tower unit presented by TACIB</a> already established a strong context by asking students to determine whether cell towers should be built near their school. Because the calculations in the unit are done to inform this decision, students can see how solving math problems can help them make more informed decisions in their local community.
 
-With that reference, I started with the following prototype.
+With the TACIB unit as a reference, I started with the following prototype.
 
 <PrototypeOne />
 
-There are a few things I liked about this prototype.
+I liked the following about the prototype:
 
 1. It makes a clear connection between solving a problem and gaining a piece of useful information. By applying the Pythagorean theorem, one can determine whether a household can receive cellular service. The wording of the question here is critical. Rather than asking students to calculate the distance between the cellular tower and each of the three households, I explicitly choose to ask about whether they receive cell coverage. This puts the emphasis on the impact of solving the problem. What matters here isn't the distance, but whether people can actually get coverage.
 
@@ -49,21 +49,21 @@ There are a few things I liked about this prototype.
 
 3. Another approach could be to ask a group of students to split up the households so that they could each calculate the distance of one household, compare and contrast their work, and as a group make a team decision about whether all households would receive cell phone coverage.
 
-4. There is some room for students to approach this problem differently in meaningful ways. For example, the blind approach to this problem would be for a student to calculate the distance between every household and the cell tower. But some students might first estimate the distance of each household to the cell tower. That might help them determine certain households that are well within range and do not need a calclulation.
+4. There is some opportuniy for students to solve this problem differently in meaningful ways. For example, students certainly can calculate the distance between every household and the cell tower, but some students might first estimate the distance of each household to the cell tower. They can then determine that certain households that are well within range and do not need an additional calclulation.
 
 Here's what I still wanted to improve:
 
-1. Ultimately, the primary work is still performing a calculation and at most reaches the "apply" level of <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/" target="_blank">Bloom's taxonomy</a>. While it's important teachers offer problems that do assess these lower levels of remembering, understanding, and applying, I believe that with some adjustments this problem could also offer opoprtunities for students to evaluate and analyze.
+1. Ultimately, the primary work is still performing a calculation and at most reaches the "apply" level of <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/" target="_blank">Bloom's taxonomy</a>. While it's important teachers offer problems that do assess these lower levels of remembering, understanding, and applying, with some adjustments, this problem can also offer opportunities for more critical thinking.
 
-2. There is still only one right answer to the question. Again, there's nothing exactly wrong with this, but I also think there's real value to showing students that there can be multiple reasonable answers to a problem. This naturally unlocks opportunities to compare and contrast answers, communicate tradeoffs, and attempt to justify the better approach for a specific context. These are all objectives that require students to reach for higher levels of critical thining.
+2. There is still only one right answer to the question. Again, there's nothing exactly wrong with this, but I also think there's real value to showing students that there can be multiple reasonable answers to a problem. This naturally unlocks opportunities to compare and contrast answers, communicate tradeoffs, and attempt to justify the better approach for a specific context. These are all objectives that require students to reach for higher levels of critical thinking.
 
 ### Second Attempt
 
 <PrototypeTwo />
 
-One of the most common ways I moved to the higher tiers of Bloom's taxonomy during my teaching career was to ask students to optimize for the minimum or maximum quantity required. In the example above, I ask students to optimize for the minimum number of cell towers that can be placed. Students now need to actually design and lay out where the cell towers should be placed. This require them to iterate over a few options, compare and contrast these options, and ultimately justify which option makes the most sense.
+One of the most common ways I moved to the higher tiers of Bloom's taxonomy during my teaching career was to ask students to optimize for the minimum or maximum quantity required. In the example above, I ask students to optimize for the minimum number of cell towers that can be placed. Students now need to actually design and lay out where the cell towers should be placed. This requires them to iterate over a few options, compare and contrast these options, and ultimately justify which option makes the most sense.
 
-In addition, there can now actually be different answers that all meet the requirement. As a teacher, what excites me most is the opportunities this provides students when they compare and constrast answers with each other. Normally, in more straightforward problems, when asked to check their answers with each other, they see if their answers match. If so, there's no further discussion. In a problem like this, however, even if both students agree wthe minimum number of cell towers is two, they can still have different results. This might lead to students taking a more critical look at each other's work to make sure that all households are indeed within cell tower range.
+In addition, there can now actually be different answers that all meet the requirement. As a teacher, what excites me most is the opportunities this provides students when they compare and constrast answers with each other. In more straightforward problems, when students are asked to check their answers, they simply see if their answers match. If so, there's no further discussion. In a problem like this, however, even if both students agree on the minimum number of cell towers, they may still have placed each cell tower in a different location. This might lead to students taking a more critical look at each other's work to make sure that all households are indeed within cell tower range.
 
 ### Final Touch up
 
@@ -71,31 +71,28 @@ In addition, there can now actually be different answers that all meet the requi
 
 There are two small updates here.
 
-1. The question has been changed from "What is the minimum number of cell towers that need to be built so that all households get cell coverage?" to "How many cell towers should be built and where?""
+1. The question has been changed from "What is the minimum number of cell towers that need to be built so that all households get cell coverage?" to "How many cell towers should be built and where?"
 
 2. I added one house at coordinates (13, 14).
 
-The more open ended problem allows students to justify a greater variety of answers. While I imagine most students will still attempt to minimize the number of cell towers that covers all households, by making one house an outlier, a couple students might question whether it's optimal to cover all households or just the majority of households.
+The more open ended question allows students to justify a greater variety of answers. While I imagine most students will still attempt to minimize the number of cell towers that covers all households, by making one house an outlier, a few students might question whether it's optimal to cover all households or just the majority of households.
 
-When such questions are asked, we can begin exploring real issues in our society. For example, is it ok to leave certain households outside of cell service range? In the real world, there are consequences to decisions organizations make and rarely does a decision benefit everyone. Decision makers need to weigh the tradeoffs of each approach and providing problems that provide students the space to start debating some of those tradeoffs is a big win in my book.
+When such questions are asked, we can begin exploring real issues in our society. For example, is it ok to leave certain households outside of cell service range? In the real world, decision makers need to weight the tradeoffs of different approaches and rarely does a single decision benefit everyone. By providing problems that enable opportunities for different answers, we provide an opportuniy for student to start grappling with these challenging questions.
 
-I hope this problem also communicates that even if we correctly "solve the math problem", that in itself does not provide the answer. Instead, solving the math problem allows us to make a more informed decision. Depending on the constraints we put on ourselves (i.e. whether we need to provide access to all households), we can come up with many viable answers that each priortize different goals (i.e. minimizing costs or ensuring equity).
+I hope this problem also communicates that even if we correctly solve the math problem, that in itself does not completely dictate our answer. Instead, solving the math problem enables us to make a more informed decision. Depending on our priorities (minimizing costs vs ensuring equitable access), we may arrive at different solutions.
 
 ### Trade Offs
 
-As problems become more open ended, it becomes harder to guarantee that students will solve the problem using one exact method. This makes it difficult to assess whether students have actually mastered the Pythagorean theorem since this particular problem can also be solved with estimation or drawing circles.
+There are some valid concerns with the prototype still, including:
 
-Students also need to spend more time on other aspects of the problem that are unrelated to applying the Pythagorean theorem. For example, in the final iteration of the prototype, they need to analyze a few places where the tower can be placed before they can even do any calcluations.
+1. As problems become more open ended, it becomes harder to guarantee that students will solve the problem using one exact method. This makes it difficult to assess whether students have actually mastered the Pythagorean theorem since this particular problem can also be solved with other techniques.
 
-Finally, despite not taking the full one or two weeks the original TACIB problem would have taken, this problem will still require more class time to solve. In the time it takes to solve this one problem, students likely could have practiced three or four sets of traditional Pythagorean problems.
+1. Students also need to spend more time on other aspects of the problem that are unrelated to applying the Pythagorean theorem. For example, in the final iteration of the prototype, they need to analyze a few places where the tower can be placed before they can even do any calcluations.
 
-These are all valid concerns. I acknowledge that every problem in the curriculum likely can't be this open ended given our emphasis on state testing and standards coverage. I do think, however, there's significant value in having at least one problem like this every couple weeks, which really pushes students to solve meaningful and open ended problems.
+1. Despite not taking the full one or two weeks the original TACIB problem would have taken, this problem will still require more class time to solve than the traditional problems first presented in this post.
 
-In part three, I'll try to justify that these tradeoffs are worth it incorporating this problem into a lesson plan.
+1. The problem alone does not necessarily force students to engage with social justice issues. A teacher may need to prompt this discussion by providing an example to the class or ask guiding questions to help students think outside of the box.
 
-### Design Constraints
+These are all valid concerns. I acknowledge that every problem in the curriculum likely can't be this open ended given the emphasis on state testing and standards coverage. I do think, however, there's significant value in having at least one problem like this, which really pushes students to solve meaningful and open ended problems, every couple of weeks.
 
-- Meets two Common Core Standards on Pythagorean Theorem
-  1. CCSS.Math.Content.8.G.B.7 - Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions.
-  1. CCSS.Math.Content.8.G.B.8 - Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.
-- Provides opportunities for students to take a different approach to solve the problem
+In part three, I'll try to justify that these tradeoffs are worth it by incorporating this problem into a complete lesson plan.
