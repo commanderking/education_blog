@@ -117,7 +117,9 @@ const CellTower = () => {
           <li>
             <Link to="/cell-tower-1">Inspiration and Context</Link>
           </li>
-          <li>Design and Development Decisions</li>
+          <li>
+            <Link to="/cell-tower-2">Design and Development Decisions</Link>
+          </li>
           <li>Classroom Implementation</li>
           <li>Potential Areas of Improvement and Future Development</li>
         </ol>
