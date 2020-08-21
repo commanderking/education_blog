@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-wrapper {
+  width: 150px;
+  height: 200px;
+}
+
+/* Diagonal stacked paper effect */
+.card {
+  background-color: #fff;
+  /* Need position to allow stacking of pseudo-elements */
+  position: absolute;
+  /* Padding for demo purposes */
+  padding: 30px;
+  width: 150px;
+  height: 175px;
+  border: 2px solid gray;
+}
+
+.card,
+.card::before,
+.card::after {
+  /* Add shadow to distinguish sheets from one another */
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.15);
+}
