@@ -35,6 +35,17 @@ const ColdCall = () => {
   );
   const [calledStudents, setCalledStudents] = useState([]);
 
+  const handleStudentSelection = () => {
+    if (!uncalledStudents.length) {
+      return;
+    }
+
+    const uncalledStudentsClone = [...uncalledStudents];
+    uncalledStudentsClone.shift();
+    setUncalledStudents(uncalledStudentsClone);
+    setCalledStudents([...calledStudents, uncalledStudents[0]]);
+  };
+
   return (
     <Layout>
       <div>
@@ -47,26 +58,21 @@ const ColdCall = () => {
             Cold call
           </a>{" "}
           is a classroom management technique used to "randomly call" on
-          students when asking questions. Its intended effect is to communicate
-          high expectations by expecting all students to be ready to answer
-          questions at any time.
+          students when asking questions. In a classroom, teachers can use a
+          deck of cards or popsicle sticks with student names to ensure the
+          process is random. In a virtual environment, it might be more
+          challenging to have these physical tools available and show each
+          answer. The goal of this prototype was to make a tool where teachers
+          can input student names and randomly call on students in an unbiased
+          way.
         </p>
         <PrototypeWrapper title="Student Cards for Cold Call">
           <div className={styles.grid}>
             <div>
               <h4>Students to Call</h4>
               <div
-                onClick={() => {
-                  if (!uncalledStudents.length) {
-                    return;
-                  }
-
-                  const uncalledStudentsClone = [...uncalledStudents];
-                  uncalledStudentsClone.shift();
-                  setUncalledStudents(uncalledStudentsClone);
-                  setCalledStudents([...calledStudents, uncalledStudents[0]]);
-                }}
-                style={{ width: "160px", height: "200px" }}
+                className={styles.cardwrapper}
+                onClick={handleStudentSelection}
               >
                 {uncalledStudents.map((student, index) => {
                   return (
@@ -84,7 +90,7 @@ const ColdCall = () => {
             </div>
             <div>
               <h4>Students Called</h4>
-              <div style={{ width: "160px", height: "200px" }}>
+              <div className={styles.cardwrapper}>
                 <div>
                   {calledStudents.map(student => {
                     return <div className={styles.card}>{student.name}</div>;
@@ -93,13 +99,14 @@ const ColdCall = () => {
               </div>
             </div>
           </div>
+          <button onClick={handleStudentSelection}>Select Student</button>
           <button
             onClick={() => {
               setCalledStudents([]);
               setUncalledStudents(shuffleArray(students));
             }}
           >
-            Reset Students
+            Reset Student Selection
           </button>
         </PrototypeWrapper>
       </div>
