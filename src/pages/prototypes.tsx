@@ -14,6 +14,13 @@ const Prototypes = () => {
             of cell towers in a Martian outpost{" "}
           </p>
         </div>
+        <div>
+          <Link to="/prototypes/coldcall">Cold Call Card Deck</Link>
+          <p>
+            Card deck used to randomly call students to check their
+            understanding
+          </p>
+        </div>
       </Layout>
     </div>
   );
