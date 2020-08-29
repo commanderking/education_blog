@@ -3,41 +3,37 @@ import { useSprings, animated, interpolate } from "react-spring";
 import { useDrag } from "react-use-gesture";
 import styles from "./cardstack.module.css";
 import Image from "gatsby-image";
+import { shuffleArray } from "./coldCallUtils";
 
 // Inspired by: https://codesandbox.io/s/cards-forked-fqdg5?file=/package.json:305-315
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
-const to = i => ({
+const to = (i: number) => ({
   x: 0,
   y: i * -4,
   scale: 1,
   rot: -10 + Math.random() * 20,
-  delay: i * 100,
+  delay: i * 20,
 });
-const from = i => ({ x: 0, rot: 0, scale: 1.5, y: 0 });
+const from = () => ({ x: 0, rot: 0, scale: 1.5, y: 100 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
-const trans = (r, s) =>
+const trans = (r: number, s: number) =>
   `perspective(1500px) rotateX(30deg) rotateY(${
     r / 10
   }deg) rotateZ(${r}deg) scale(${s})`;
 
 const Deck = ({ students, cardLogo }) => {
-  const studentCards = [...students, { name: "", img: cardLogo }];
+  const [shuffled, setShuffled] = useState([
+    ...shuffleArray(students),
+    { name: "", img: cardLogo },
+  ]);
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
-  const [props, set] = useSprings(studentCards.length, i => ({
+  const [props, set] = useSprings(shuffled.length, i => ({
     ...to(i),
-    from: from(i),
+    from: from(),
   })); // Create a bunch of springs using the helpers above
-  // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useDrag(
-    ({
-      args: [index],
-      down,
-      movement: [mx],
-      distance,
-      direction: [xDir],
-      velocity,
-    }) => {
+    ({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
       const trigger = velocity > 0.2; // If you flick hard enough it should trigger the card to fly out
       const dir = xDir < 0 ? -1 : 1; // Direction should either point left or right
       if (!down && trigger) gone.add(index); // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
@@ -55,16 +51,19 @@ const Deck = ({ students, cardLogo }) => {
           config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
         };
       });
-      if (!down && gone.size === studentCards.length)
-        setTimeout(() => gone.clear() || set(i => to(i)), 600);
+      if (!down && gone.size === shuffled.length) {
+        setTimeout(() => {
+          gone.clear();
+          set(i => to(i));
+        }, 200);
+      }
     }
   );
-  console.log("props", props);
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
     <div className={styles.deckcontainer}>
       {props.map(({ x, y, rot, scale }, i) => {
-        console.log("students", students);
+        const student = shuffled[i];
         return (
           <animated.div key={i} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
@@ -72,28 +71,31 @@ const Deck = ({ students, cardLogo }) => {
               {...bind(i)}
               style={{
                 transform: interpolate([rot, scale], trans),
-                // backgroundImage: `url(${cards[i]})`,
               }}
             >
-              {studentCards[i].name && (
-                <h3 style={{ textAlign: "center" }}>{studentCards[i].name}</h3>
+              {student.name && (
+                <h3 className={styles.cardtext}>{student.name}</h3>
               )}
-              {studentCards[i].img && (
+              {student.img && (
                 <Image
-                  style={{
-                    width: "150px",
-                    margin: "auto",
-                    marginTop: "25px",
-                    pointerEvents: "none",
-                  }}
+                  className={styles.cardimage}
                   fluid={cardLogo}
-                  alt="Martian Outpost"
+                  alt="card logo"
                 />
               )}
             </animated.div>
           </animated.div>
         );
       })}
+      <button
+        onClick={() => {
+          gone.clear();
+          setShuffled([...shuffleArray(students), { name: "", img: cardLogo }]);
+          set(i => to(i));
+        }}
+      >
+        Shuffle
+      </button>
     </div>
   );
 };
