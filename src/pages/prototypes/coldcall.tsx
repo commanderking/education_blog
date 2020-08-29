@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import PrototypeWrapper from "../../components/prototypeWrapper";
 import Layout from "../../components/layout";
 import styles from "./coldcall.module.css";
+import CardStack from "../../components/prototypes/coldcall/CardStack";
+import { useStaticQuery, graphql } from "gatsby";
+import actlogo from "../../../content/assets/actlogo.png";
 
 const students = [
   {
@@ -30,6 +33,18 @@ function shuffleArray(array) {
 }
 
 const ColdCall = () => {
+  const images = useStaticQuery(graphql`
+    query logo {
+      logo: file(absolutePath: { regex: "/actlogo.png/" }) {
+        childImageSharp {
+          fluid(maxWidth: 50, maxHeight: 50) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   const [uncalledStudents, setUncalledStudents] = useState(
     shuffleArray(students)
   );
@@ -67,39 +82,11 @@ const ColdCall = () => {
           way.
         </p>
         <PrototypeWrapper title="Student Cards for Cold Call">
-          <div className={styles.grid}>
-            <div>
-              <h4>Students to Call</h4>
-              <div
-                className={styles.cardwrapper}
-                onClick={handleStudentSelection}
-              >
-                {uncalledStudents.map((student, index) => {
-                  return (
-                    <div
-                      className={styles.card}
-                      style={{
-                        marginLeft: `${1 * index}px`,
-                        marginTop: `${1 * index}px`,
-                        zIndex: 10000 - index,
-                      }}
-                    ></div>
-                  );
-                })}
-              </div>
-            </div>
-            <div>
-              <h4>Students Called</h4>
-              <div className={styles.cardwrapper}>
-                <div>
-                  {calledStudents.map(student => {
-                    return <div className={styles.card}>{student.name}</div>;
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-          <button onClick={handleStudentSelection}>Select Student</button>
+          <h3>Swipe Card to Pick Student</h3>
+          <CardStack
+            students={uncalledStudents}
+            cardLogo={images.logo.childImageSharp.fluid}
+          />
           <button
             onClick={() => {
               setCalledStudents([]);
