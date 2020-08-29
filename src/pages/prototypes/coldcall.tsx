@@ -1,3 +1,4 @@
+import React from "react";
 import ColdCall from "../../components/prototypes/coldcall/ColdCall";
 
 const ColdCallPage = () => {

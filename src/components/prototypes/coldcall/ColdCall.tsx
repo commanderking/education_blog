@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PrototypeWrapper from "../../components/prototypeWrapper";
-import Layout from "../../components/layout";
-import CardStack from "./components/prototypes/coldcall/CardStack";
+import PrototypeWrapper from "../../prototypeWrapper";
+import Layout from "../../layout";
+import CardStack from "./CardStack";
 import { useStaticQuery, graphql } from "gatsby";
 
 const students = [
@@ -70,8 +70,8 @@ const ColdCall = () => {
           students when asking questions. In a classroom, teachers can use a
           deck of cards or popsicle sticks with student names to ensure the
           process is random. In a virtual environment, it might be more
-          challenging to have these physical tools ready in front of a computer.
-          The goal of this prototype was to make a tool where teachers can input
+          challenging to have these physical tools in front of a computer. The
+          goal of this prototype was to offer a tool where teachers can input
           student names and randomly call on students in an unbiased way.
         </p>
         <p>
