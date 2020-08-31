@@ -8,7 +8,6 @@ import SEO from "../components/seo";
 import { rhythm, scale } from "../utils/typography";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  console.log("data", data);
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
