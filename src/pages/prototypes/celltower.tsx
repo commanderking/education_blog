@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import PrototypeWrapper from "../../components/prototypeWrapper";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import _ from "lodash";
 
 const houseCoordinates = [
   { x: 5, y: 9 },
@@ -19,6 +20,15 @@ const houseCoordinates = [
   { x: -2, y: 7 },
   { x: 9, y: -9 },
 ];
+
+const sortedCoordinates = _.sortBy(houseCoordinates, "y").map(
+  (coordinate, index) => {
+    return {
+      ...coordinate,
+      label: String.fromCharCode(65 + index),
+    };
+  }
+);
 
 const CellTower = () => {
   const data = useStaticQuery(graphql`
@@ -43,6 +53,7 @@ const CellTower = () => {
   }, [layoutRef.current]);
 
   const gridSide = wrapperDivWidth - 25 || 600;
+  console.log("sorteDCoordinates", sortedCoordinates);
   return (
     <Layout>
       <div ref={layoutRef}>
@@ -94,8 +105,8 @@ const CellTower = () => {
             preplacedIcons={[
               {
                 iconImage: homeIcon,
-                iconSize: 15,
-                coordinates: houseCoordinates,
+                iconSize: 20,
+                coordinates: sortedCoordinates,
               },
             ]}
           />
