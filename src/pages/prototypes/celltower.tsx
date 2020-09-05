@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import PrototypeWrapper from "../../components/prototypeWrapper";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import _ from "lodash";
 
 const houseCoordinates = [
   { x: 5, y: 9 },
@@ -19,6 +20,17 @@ const houseCoordinates = [
   { x: -2, y: 7 },
   { x: 9, y: -9 },
 ];
+
+const sortedCoordinates = _.sortBy(houseCoordinates, ["y", "x"])
+  .slice()
+  // we want descending sort, _.sortBy default to ascending
+  .reverse()
+  .map((coordinate, index) => {
+    return {
+      ...coordinate,
+      label: String.fromCharCode(65 + index),
+    };
+  });
 
 const CellTower = () => {
   const data = useStaticQuery(graphql`
@@ -88,14 +100,14 @@ const CellTower = () => {
             gridWidth={gridSide}
             addableIcon={{
               iconImage: cellTower,
-              iconSize: 20,
+              iconSize: 25,
               maxIcons: 5,
             }}
             preplacedIcons={[
               {
                 iconImage: homeIcon,
-                iconSize: 15,
-                coordinates: houseCoordinates,
+                iconSize: 20,
+                coordinates: sortedCoordinates,
               },
             ]}
           />
