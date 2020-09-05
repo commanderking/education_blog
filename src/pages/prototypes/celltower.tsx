@@ -21,14 +21,16 @@ const houseCoordinates = [
   { x: 9, y: -9 },
 ];
 
-const sortedCoordinates = _.sortBy(houseCoordinates, "y").map(
-  (coordinate, index) => {
+const sortedCoordinates = _.sortBy(houseCoordinates, ["y", "x"])
+  .slice()
+  // we want descending sort, _.sortBy default to ascending
+  .reverse()
+  .map((coordinate, index) => {
     return {
       ...coordinate,
       label: String.fromCharCode(65 + index),
     };
-  }
-);
+  });
 
 const CellTower = () => {
   const data = useStaticQuery(graphql`
@@ -53,7 +55,6 @@ const CellTower = () => {
   }, [layoutRef.current]);
 
   const gridSide = wrapperDivWidth - 25 || 600;
-  console.log("sorteDCoordinates", sortedCoordinates);
   return (
     <Layout>
       <div ref={layoutRef}>
@@ -99,7 +100,7 @@ const CellTower = () => {
             gridWidth={gridSide}
             addableIcon={{
               iconImage: cellTower,
-              iconSize: 20,
+              iconSize: 25,
               maxIcons: 5,
             }}
             preplacedIcons={[
