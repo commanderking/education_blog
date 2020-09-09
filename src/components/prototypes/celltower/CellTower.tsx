@@ -8,6 +8,8 @@ import PrototypeWrapper from "../../prototypeWrapper";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import _ from "lodash";
+import Modal from "react-modal";
+import EditModalContent from "./EditModalContent";
 
 const houseCoordinates = [
   { x: 5, y: 9 },
@@ -51,6 +53,12 @@ const CellTower = () => {
 
   const [wrapperDivWidth, setWrapperDivWidth] = useState(800);
   const layoutRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [houses, setHouses] = useState(houseIcons);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     setWrapperDivWidth(layoutRef?.current?.offsetWidth);
@@ -105,8 +113,23 @@ const CellTower = () => {
               size: 25,
               maxIcons: houseIcons.length + 5,
             }}
-            initialIcons={houseIcons}
+            initialIcons={houses}
           />
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+          >
+            Edit Prototype
+          </button>
+          <Modal
+            isOpen={isModalOpen}
+            shouldCloseOnEsc={true} // doesn't work right now?
+            shouldCloseOnOverlayClick={true} // doesn't work right now?
+            style={{ content: { left: "20%", right: "20%" } }}
+          >
+            <EditModalContent closeModal={closeModal} icons={houses} />
+          </Modal>
         </PrototypeWrapper>
         <h4>Resources and Inspiration</h4>
         <p>
