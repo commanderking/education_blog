@@ -4,27 +4,25 @@ import cellTower from "../../assets/cell-tower.svg";
 import homeIcon from "../..//assets/home-icon.svg";
 import PrototypeWrapper from "../../../src/components/prototypeWrapper.tsx";
 
-const houseCoordinates = [
+const size = 25;
+const houseIcons = [
   { x: 3, y: 4 },
   { x: 4, y: 2 },
   { x: 5, y: 5 },
-];
+].map(icon => ({ ...icon, size, image: homeIcon }));
 
 const PrototypeOne = () => {
   return (
     <div style={{ marginBottom: "20px" }}>
       <PrototypeWrapper title="Prototype 1">
         <SimpleGrid
-          preplacedIcons={[
+          initialIcons={[
+            ...houseIcons,
             {
-              iconImage: homeIcon,
-              iconSize: 25,
-              coordinates: houseCoordinates,
-            },
-            {
-              iconImage: cellTower,
-              iconSize: 30,
-              coordinates: [{ x: 1, y: 1 }],
+              image: cellTower,
+              size: 30,
+              x: 1,
+              y: 1,
             },
           ]}
         />
