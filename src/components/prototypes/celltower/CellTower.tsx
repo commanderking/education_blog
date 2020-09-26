@@ -21,7 +21,7 @@ const houseCoordinates = [
   { x: 9, y: -9 },
 ];
 
-const sortedCoordinates = _.sortBy(houseCoordinates, ["y", "x"])
+const houseIcons = _.sortBy(houseCoordinates, ["y", "x"])
   .slice()
   // we want descending sort, _.sortBy default to ascending
   .reverse()
@@ -29,6 +29,8 @@ const sortedCoordinates = _.sortBy(houseCoordinates, ["y", "x"])
     return {
       ...coordinate,
       label: String.fromCharCode(65 + index),
+      size: 20,
+      image: homeIcon,
     };
   });
 
@@ -99,17 +101,11 @@ const CellTower = () => {
             gridHeight={gridSide}
             gridWidth={gridSide}
             addableIcon={{
-              iconImage: cellTower,
-              iconSize: 25,
-              maxIcons: 5,
+              image: cellTower,
+              size: 25,
+              maxIcons: houseIcons.length + 5,
             }}
-            preplacedIcons={[
-              {
-                iconImage: homeIcon,
-                iconSize: 20,
-                coordinates: sortedCoordinates,
-              },
-            ]}
+            initialIcons={houseIcons}
           />
         </PrototypeWrapper>
         <h4>Resources and Inspiration</h4>

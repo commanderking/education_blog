@@ -4,6 +4,7 @@ import cellTower from "../../assets/cell-tower.svg";
 import homeIcon from "../..//assets/home-icon.svg";
 import PrototypeWrapper from "../../../src/components/prototypeWrapper.tsx";
 
+const size = 20;
 const houseCoordinates = [
   { x: 3, y: 4 },
   { x: 3, y: 8 },
@@ -12,22 +13,13 @@ const houseCoordinates = [
   { x: 8, y: 1 },
   { x: 9, y: 7 },
   { x: 13, y: 14 },
-];
+].map(icon => ({ ...icon, size, image: homeIcon }));
 
 const PrototypeTwo = () => {
   return (
     <div style={{ marginBottom: "20px" }}>
       <PrototypeWrapper title="Prototype 3">
-        <SimpleGrid
-          dimensions={[15, 15]}
-          preplacedIcons={[
-            {
-              iconImage: homeIcon,
-              iconSize: 20,
-              coordinates: houseCoordinates,
-            },
-          ]}
-        />
+        <SimpleGrid dimensions={[15, 15]} initialIcons={houseCoordinates} />
 
         <div>
           Houses within 4 kilometers of a tower can get service.{" "}

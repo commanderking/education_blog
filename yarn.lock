@@ -12220,10 +12220,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-open-math-tools@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/open-math-tools/-/open-math-tools-0.4.0.tgz#f757bb8cdca1f4e1b87206a8755ed13113f3ee56"
-  integrity sha512-rSvy1RTbDx8LXj8/Jp/hAgMGtYCwzaTY68o1OfRcLWoL6EBCm+BgNBAWzvkGlbKPhlc53UNG1hAecGgmD56R7Q==
+open-math-tools@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/open-math-tools/-/open-math-tools-0.5.0.tgz#810daeb2d694c45348e48cd3a22e4976f4727e8b"
+  integrity sha512-QBbDm0cfV+XNg2hDUBprZD/9xHfAw5wXi2FecEYEwyCw2QmmRCbdJrfzMdKd7Hvyc7Usn0koppSP+CyChh1jHA==
   dependencies:
     d3-scale "^3.2.1"
 
