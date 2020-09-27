@@ -21,8 +21,6 @@ type Props = {
   setIcons: React.Dispatch<React.SetStateAction<Icon[]>>;
 };
 
-console.log("test", test);
-
 const EditModalContent = ({ closeModal, icons, setIcons, gridSide }: Props) => {
   const [editedIcons, setEditedIcons] = useState(stripLabels(icons));
 
