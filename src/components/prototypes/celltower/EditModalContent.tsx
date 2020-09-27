@@ -23,7 +23,15 @@ const EditModalContent = ({ closeModal, icons, setIcons, gridSide }: Props) => {
   };
   return (
     <div>
-      <h4>Edit Prototype</h4>
+      <button
+        onClick={() => {
+          closeModal();
+        }}
+        style={{ position: "absolute", right: "5px", top: "5px" }}
+      >
+        X
+      </button>
+      <h4 style={{ marginTop: "1rem" }}>Edit Prototype</h4>
       <p>Click a coordinate to add or remove houses.</p>
       <CoordinateGrid
         id="EditableGrid"
@@ -40,6 +48,7 @@ const EditModalContent = ({ closeModal, icons, setIcons, gridSide }: Props) => {
         onIconClick={handleIconClick}
       />
       <button
+        style={{ display: "block" }}
         onClick={() => {
           setIcons(sortAndLabelIcons(editedIcons));
           closeModal();
