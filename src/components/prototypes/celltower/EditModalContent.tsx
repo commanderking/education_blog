@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import { CoordinateGrid } from "open-math-tools";
 import homeIcon from "../../../../content/assets/home-icon.svg";
 import { sortAndLabelIcons, stripLabels } from "./cellTowerUtils";
+import * as test from "open-math-tools";
+
+// TODO: Get this type from the library
+type Icon = {
+  x: number;
+  y: number;
+  label?: string;
+  key?: string;
+  image: string;
+  size: number;
+};
 
 type Props = {
-  closeModal: any;
-  icons: { x: number; y: number }[]; // export coordinate type from library
+  closeModal: () => void;
+  icons: Icon[];
   gridSide: number;
-  setIcons: any;
+  setIcons: React.Dispatch<React.SetStateAction<Icon[]>>;
 };
+
+console.log("test", test);
 
 const EditModalContent = ({ closeModal, icons, setIcons, gridSide }: Props) => {
   const [editedIcons, setEditedIcons] = useState(stripLabels(icons));
