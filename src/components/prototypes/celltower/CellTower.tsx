@@ -10,6 +10,7 @@ import Image from "gatsby-image";
 import _ from "lodash";
 import Modal from "react-modal";
 import EditModalContent from "./EditModalContent";
+import { sortAndLabelIcons } from "./cellTowerUtils";
 
 const houseCoordinates = [
   { x: 5, y: 9 },
@@ -23,18 +24,11 @@ const houseCoordinates = [
   { x: 9, y: -9 },
 ];
 
-const houseIcons = _.sortBy(houseCoordinates, ["y", "x"])
-  .slice()
-  // we want descending sort, _.sortBy default to ascending
-  .reverse()
-  .map((coordinate, index) => {
-    return {
-      ...coordinate,
-      label: String.fromCharCode(65 + index),
-      size: 20,
-      image: homeIcon,
-    };
-  });
+const houseIcons = sortAndLabelIcons(houseCoordinates).map(icon => ({
+  ...icon,
+  image: homeIcon,
+  size: 20,
+}));
 
 const CellTower = () => {
   const data = useStaticQuery(graphql`
@@ -54,7 +48,22 @@ const CellTower = () => {
   const [wrapperDivWidth, setWrapperDivWidth] = useState(800);
   const layoutRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [houses, setHouses] = useState(houseIcons);
+
+  // Used for editing location of icons if user chooses to edit
+  const [icons, setIcons] = useState(houseIcons);
+  const handleIconClick = clickedIcon => {
+    const newCoordinates = icons.filter(
+      currentIcon =>
+        !(
+          currentIcon.x === clickedIcon.x &&
+          currentIcon.y === clickedIcon.y &&
+          // Only allow cell towers to be removed when not in edit mode.
+          currentIcon.image === cellTower
+        )
+    );
+
+    setIcons(newCoordinates);
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -65,6 +74,7 @@ const CellTower = () => {
   }, [layoutRef.current]);
 
   const gridSide = wrapperDivWidth - 25 || 600;
+
   return (
     <Layout>
       <div ref={layoutRef}>
@@ -111,9 +121,12 @@ const CellTower = () => {
             addableIcon={{
               image: cellTower,
               size: 25,
-              maxIcons: houseIcons.length + 5,
+              onAddIcon: icon => {
+                setIcons([...icons, icon]);
+              },
             }}
-            initialIcons={houses}
+            activeIcons={icons}
+            onIconClick={handleIconClick}
           />
           <button
             onClick={() => {
@@ -128,7 +141,12 @@ const CellTower = () => {
             shouldCloseOnOverlayClick={true} // doesn't work right now?
             style={{ content: { left: "20%", right: "20%" } }}
           >
-            <EditModalContent closeModal={closeModal} icons={houses} />
+            <EditModalContent
+              closeModal={closeModal}
+              icons={icons}
+              setIcons={setIcons}
+              gridSide={gridSide}
+            />
           </Modal>
         </PrototypeWrapper>
         <h4>Resources and Inspiration</h4>

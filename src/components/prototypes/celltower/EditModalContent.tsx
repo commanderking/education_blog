@@ -1,26 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { CoordinateGrid } from "open-math-tools";
 import homeIcon from "../../../../content/assets/home-icon.svg";
-import * as test from "open-math-tools";
+import { sortAndLabelIcons, stripLabels } from "./cellTowerUtils";
 
-console.log("test", test);
 type Props = {
   closeModal: any;
-  icons: { x: number; y: number }; // export coordinate type from library
+  icons: { x: number; y: number }[]; // export coordinate type from library
+  gridSide: number;
+  setIcons: any;
 };
 
-const EditModalContent = ({ closeModal, icons }: Props) => {
+const EditModalContent = ({ closeModal, icons, setIcons, gridSide }: Props) => {
+  const [editedIcons, setEditedIcons] = useState(stripLabels(icons));
+
+  const handleIconClick = clickedIcon => {
+    const newCoordinates = editedIcons.filter(
+      currentIcon =>
+        !(currentIcon.x === clickedIcon.x && currentIcon.y === clickedIcon.y)
+    );
+
+    setEditedIcons(newCoordinates);
+  };
   return (
     <div>
       <h4>Edit Prototype</h4>
-      {/* <CoordinateGrid
+      <p>Click a coordinate to add or remove houses.</p>
+      <CoordinateGrid
+        id="EditableGrid"
+        gridHeight={gridSide}
+        gridWidth={gridSide}
         addableIcon={{
-          iconImage: homeIcon,
-          iconSize: 20,
-          coordinates: houses,
+          image: homeIcon,
+          size: 20,
+          onAddIcon: icon => {
+            setEditedIcons([...editedIcons, icon]);
+          },
         }}
-      /> */}
-      <button onClick={closeModal}>Done</button>
+        activeIcons={editedIcons}
+        onIconClick={handleIconClick}
+      />
+      <button
+        onClick={() => {
+          setIcons(sortAndLabelIcons(editedIcons));
+          closeModal();
+        }}
+      >
+        Save Changes
+      </button>
     </div>
   );
 };
