@@ -10,7 +10,7 @@ import Image from "gatsby-image";
 import _ from "lodash";
 import Modal from "react-modal";
 import EditModalContent from "./EditModalContent";
-import { sortAndLabelIcons } from "./cellTowerUtils";
+import { sortAndLabelIcons, getGridUnitPixels } from "./cellTowerUtils";
 
 const houseCoordinates = [
   { x: 5, y: 9 },
@@ -29,6 +29,11 @@ const houseIcons = sortAndLabelIcons(houseCoordinates).map(icon => ({
   image: homeIcon,
   size: 20,
 }));
+
+const defaultGridProps = {
+  xMax: 10,
+  yMax: 10,
+};
 
 const CellTower = () => {
   const data = useStaticQuery(graphql`
@@ -65,6 +70,9 @@ const CellTower = () => {
     setIcons(newCoordinates);
   };
 
+  const [gridProps, setGridProps] = useState(defaultGridProps);
+  const { xMax, yMax } = gridProps;
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -74,6 +82,7 @@ const CellTower = () => {
   }, [layoutRef.current]);
 
   const gridSide = wrapperDivWidth - 25 || 600;
+  const gridUnitPixels = getGridUnitPixels(gridSide, xMax, yMax);
 
   return (
     <Layout>
@@ -116,8 +125,8 @@ const CellTower = () => {
           </div>
           <CoordinateGrid
             id="CellTowerPrototype"
-            gridHeight={gridSide}
-            gridWidth={gridSide}
+            gridWidth={gridUnitPixels * xMax}
+            gridHeight={gridUnitPixels * yMax}
             addableIcon={{
               image: cellTower,
               size: 25,
@@ -127,6 +136,10 @@ const CellTower = () => {
             }}
             activeIcons={icons}
             onIconClick={handleIconClick}
+            xDomain={[-xMax, xMax]}
+            yDomain={[-yMax, yMax]}
+            xTicksNumber={xMax * 2}
+            yTicksNumber={yMax * 2}
           />
           <button
             onClick={() => {
@@ -146,6 +159,8 @@ const CellTower = () => {
               icons={icons}
               setIcons={setIcons}
               gridSide={gridSide}
+              gridProps={gridProps}
+              setGridProps={setGridProps}
             />
           </Modal>
         </PrototypeWrapper>
