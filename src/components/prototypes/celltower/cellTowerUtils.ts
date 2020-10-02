@@ -33,3 +33,12 @@ export const getGridUnitPixels = (
 
   return gridSide / y;
 };
+
+export const isInGrid = (
+  xMax: number,
+  yMax: number,
+  icon: { x: number; y: number }
+) => {
+  const { x, y } = icon;
+  return x >= -xMax && x <= xMax && y >= -yMax && y <= yMax;
+};
