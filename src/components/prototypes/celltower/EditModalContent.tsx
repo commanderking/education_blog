@@ -66,24 +66,26 @@ const EditModalContent = ({
         <input
           type="number"
           min={1}
-          max={100}
+          max={20}
           value={xMax}
           onChange={event => {
             const value = event.target.value;
             setEditedGridProps({ ...editedGridProps, xMax: value });
           }}
+          style={{ width: 50 }}
         ></input>
 
         <label>Y Max</label>
         <input
           type="number"
           min={1}
-          max={100}
+          max={20}
           value={yMax}
           onChange={event => {
             const value = event.target.value;
             setEditedGridProps({ ...editedGridProps, yMax: value });
           }}
+          style={{ width: 50 }}
         ></input>
       </form>
       <CoordinateGrid
