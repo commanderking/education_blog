@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CoordinateGrid } from "open-math-tools";
 import homeIcon from "../../../../content/assets/home-icon.svg";
-import { sortAndLabelIcons, stripLabels } from "./cellTowerUtils";
+import { sortAndLabelIcons, stripLabels, isInGrid } from "./cellTowerUtils";
 import { getGridUnitPixels } from "./cellTowerUtils";
 
 // TODO: Get this type from the library
@@ -40,10 +40,7 @@ const EditModalContent = ({
   const xTicksNumber = xMax * 2;
   const yTicksNumber = yMax * 2;
 
-  console.log("gridSide", gridSide);
-
   const gridUnitPixels = getGridUnitPixels(gridSide, xMax, yMax);
-  console.log("gridUnitPixels", gridUnitPixels);
   const handleIconClick = clickedIcon => {
     const newCoordinates = editedIcons.filter(
       currentIcon =>
@@ -69,24 +66,26 @@ const EditModalContent = ({
         <input
           type="number"
           min={1}
-          max={100}
+          max={20}
           value={xMax}
           onChange={event => {
             const value = event.target.value;
             setEditedGridProps({ ...editedGridProps, xMax: value });
           }}
+          style={{ width: 50 }}
         ></input>
 
         <label>Y Max</label>
         <input
           type="number"
           min={1}
-          max={100}
+          max={20}
           value={yMax}
           onChange={event => {
             const value = event.target.value;
             setEditedGridProps({ ...editedGridProps, yMax: value });
           }}
+          style={{ width: 50 }}
         ></input>
       </form>
       <CoordinateGrid
@@ -111,7 +110,10 @@ const EditModalContent = ({
       <button
         style={{ display: "block" }}
         onClick={() => {
-          setIcons(sortAndLabelIcons(editedIcons));
+          const editedIconsInGrid = editedIcons.filter(icon =>
+            isInGrid(xMax, yMax, icon)
+          );
+          setIcons(sortAndLabelIcons(editedIconsInGrid));
           setGridProps(editedGridProps);
           closeModal();
         }}
